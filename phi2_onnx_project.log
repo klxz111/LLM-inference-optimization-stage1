@@ -1,0 +1,28 @@
+2026-03-12 16:43:40 - INFO - ======================================================================
+2026-03-12 16:43:40 - INFO - Phi-2 (2.7B) + ONNX Runtime 推理优化实验
+2026-03-12 16:43:40 - INFO - ======================================================================
+2026-03-12 16:43:40 - INFO - 
+=== GPU性能监控（RTX 4070 12GB） ===
+2026-03-12 16:43:40 - INFO - 显存占用: 0.9GB / 8.0GB | GPU利用率: 2%
+2026-03-12 16:43:40 - INFO - 
+=== Phi-2 精度评估（PPL困惑度） ===
+2026-03-12 16:43:43 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2026-03-12 16:43:59 - INFO - Phi-2 PPL困惑度: 13.01（越小精度越高）
+2026-03-12 16:43:59 - INFO - 
+=== 原生PyTorch推理基线 ===
+2026-03-12 16:44:01 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2026-03-12 16:44:27 - INFO - 总耗时: 23.38s | 总Token: 750 | 吞吐率: 32.08 tokens/s
+2026-03-12 16:44:27 - INFO - 
+=== ONNX Runtime推理优化 ===
+2026-03-12 16:44:27 - INFO - 导出Phi-2模型到ONNX格式...
+2026-03-12 16:44:40 - ERROR - ONNX Runtime失败: No module named 'onnxscript'
+2026-03-12 16:44:41 - INFO - 
+=== 实验结果汇总 ===
+2026-03-12 16:44:41 - INFO - 核心指标 | PPL=13.01 | 显存=0.9GB | PyTorch吞吐=32.08 tokens/s | ONNX吞吐=0.0 tokens/s
+2026-03-12 16:44:41 - INFO - 
+=== 生成性能对比图表 ===
+2026-03-12 16:44:46 - INFO - 性能图表已保存到: /mnt/e/phi2_onnx_throughput.png
+2026-03-12 16:44:46 - INFO - 
+======================================================================
+2026-03-12 16:44:46 - INFO - 实验完成！日志文件: /mnt/e/phi2_onnx_project.log
+2026-03-12 16:44:46 - INFO - ======================================================================
